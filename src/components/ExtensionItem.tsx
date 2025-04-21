@@ -26,7 +26,8 @@ export default function ExtensionItem({
       </div>
       <div className='extension-item__actions'>
         <button onClick={() => onRemoveExtension(name)}>Remove</button>
-        <label htmlFor={`${name}-extension-state`}>
+        <div className='extension-item__state'>
+          <label htmlFor={`${name}-extension-state`}></label>
           <input
             type='checkbox'
             name='extension-item__state'
@@ -34,7 +35,7 @@ export default function ExtensionItem({
             onChange={(e) => onExtensionChange?.(name, e.target.checked)}
             checked={isActive}
           />
-        </label>
+        </div>
       </div>
     </li>
   );

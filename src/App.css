@@ -293,38 +293,49 @@
   }
 }
 
-.extension-item__actions input {
-  cursor: pointer;
-  opacity: 0;
-}
-
-.extension-item__actions label:has(input:focus-visible) {
-  outline: 2px solid var(--red-500);
-  outline-offset: 2px;
-}
-
-.extension-item__actions label {
+.extension-item__actions .extension-item__state {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   background-color: var(--neutral-600);
   border-radius: 999px;
   width: 2rem;
   height: 1.1rem;
   box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.2);
+  overflow: hidden;
 }
 
-.light .extension-item__actions label {
+.light .extension-item__state {
   background-color: var(--neutral-300);
 }
 
-.extension-item__actions label::before {
+.extension-item__state input {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  inset: 0;
+  z-index: 1;
+  margin: 0;
+}
+
+.extension-item__state label {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.extension-item__state input:focus-visible {
+  outline: 2px solid var(--red-500);
+  outline-offset: 2px;
+}
+
+.extension-item__state label::before {
   content: '';
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  left: 0.15rem;
+  transform: translateY(-50%);
   width: 0.85rem;
   height: 0.85rem;
   border-radius: 999px;
@@ -332,22 +343,22 @@
   transition: all 0.2s ease-in-out;
 }
 
-.extension-item__actions label:has(input:checked)::before {
-  transform: translate(50%, -50%);
+.extension-item__state:has(input:checked) label::before {
+  left: 1rem;
 }
 
-.extension-item__actions label:has(input:checked) {
+.extension-item__state:has(input:checked) label {
   background-color: var(--red-400);
 }
 
-.extension-item__actions label:has(input:checked):hover {
+.extension-item__state:hover:has(input:checked) label {
   background-color: var(--red-500);
 }
 
-.light .extension-item__actions label:has(input:checked) {
+.light .extension-item__state:has(input:checked) label {
   background-color: var(--red-700);
 }
 
-.light .extension-item__actions label:has(input:checked):hover {
+.light .extension-item__state:hover:has(input:checked) label {
   background-color: var(--red-500);
 }
