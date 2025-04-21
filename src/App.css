@@ -1,8 +1,6 @@
 #root {
   max-width: 1440px;
   min-height: 100svh;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
   margin-inline: auto;
 }
 
@@ -18,6 +16,8 @@
 }
 
 .container {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
   padding-inline: 1rem;
   @media (min-width: 1440px) {
     padding-inline: 8rem;
