@@ -1,5 +1,5 @@
-import SunIcon from '../../assets/images/icon-sun.svg?react';
-import MoonIcon from '../../assets/images/icon-moon.svg?react';
+import SunIcon from '/public/assets/images/icon-sun.svg?react';
+import MoonIcon from '/public/assets/images/icon-moon.svg?react';
 import { useThemeSwitcher } from '../hooks/UseThemeSwitcher';
 
 export function ThemeSwitcher() {

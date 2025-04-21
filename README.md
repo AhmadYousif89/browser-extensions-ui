@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github Link](https://github.com/AhmadYousif89/browser-extensions-ui)
-- Live Site URL: [Link](https://vercel.app)
+- Live Site URL: [Link](https://browser-extensions-ui-beryl.vercel.app/)
 
 ## My process
 

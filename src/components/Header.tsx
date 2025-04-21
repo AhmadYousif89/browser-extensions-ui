@@ -1,4 +1,4 @@
-import BrandLogo from '../../assets/images/logo.svg?react';
+import BrandLogo from '/public/assets/images/logo.svg?react';
 import { ThemeSwitcher } from './ThemeSwitcher';
 
 export default function Header() {
