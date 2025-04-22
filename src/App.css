@@ -46,6 +46,9 @@
 .logo {
   width: 11rem;
   height: 2.7rem;
+  path {
+    fill: var(--neutral-0);
+  }
   g path {
     fill: var(--red-500);
   }
@@ -123,9 +126,6 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 4rem;
-    h1 {
-      font-size: 2.125rem;
-    }
   }
 }
 
@@ -143,12 +143,11 @@
 .filter-buttons button {
   background-color: var(--neutral-700);
   color: var(--neutral-100);
-  padding-inline: 1.15rem;
-  padding-block: 0.53rem;
+  padding-inline: 1.125rem;
+  padding-block: 0.48rem;
   border-radius: 999px;
   font-size: 1.25rem;
   font-weight: 500;
-  min-height: 2.65rem;
   border: 1px solid var(--neutral-600);
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.05);
 }
@@ -163,16 +162,20 @@
   background-color: var(--neutral-600);
 }
 
+.filter-buttons button.active:hover {
+  background-color: var(--red-500);
+}
+
+.filter-buttons button.active {
+  color: var(--neutral-900);
+  background-color: var(--red-400);
+  border-color: transparent;
+}
+
 .light .filter-buttons button:hover {
   background-color: var(--neutral-0);
   color: var(--neutral-600);
   opacity: 0.9;
-}
-
-.filter-buttons button.active {
-  color: var(--neutral-800);
-  background-color: var(--red-400);
-  border-color: transparent;
 }
 
 .light .filter-buttons button.active {
@@ -191,7 +194,7 @@
   );
   --grid-min-col-size-calc: min(100%, max(var(--grid-min-col-size), var(--grid-col-size-calc)));
 
-  gap: var(--grid-gap);
+  gap: calc(var(--grid-gap) * 0.75);
   justify-items: center;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-col-size-calc), 1fr));
@@ -234,14 +237,15 @@
 .extension-item__content .extension-item__info {
   h2 {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   p {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
+    letter-spacing: -0.6px;
     line-height: 1.4;
-    margin-top: 0.7rem;
+    margin-top: 0.5rem;
     color: var(--neutral-300);
   }
 }
@@ -301,8 +305,8 @@
   align-items: center;
   background-color: var(--neutral-600);
   border-radius: 999px;
-  width: 2rem;
-  height: 1.1rem;
+  width: 2.25rem;
+  height: 1.25rem;
   box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.2);
   overflow: hidden;
 }
@@ -332,7 +336,7 @@
   content: '';
   position: absolute;
   top: 50%;
-  left: 0.15rem;
+  left: 0.19rem;
   transform: translateY(-50%);
   width: 0.85rem;
   height: 0.85rem;
@@ -342,7 +346,7 @@
 }
 
 .extension-item__state:has(input:checked) label::before {
-  left: 1rem;
+  left: 1.19rem;
 }
 
 .extension-item__state:has(input:checked) label {
